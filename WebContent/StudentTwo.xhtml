@@ -5,6 +5,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
   <title>Student Two</title>
+  <h:outputSylesheet library="css" name="stylees.css"/>
 </h:head>
 
 <h:body>
@@ -24,6 +25,16 @@ Country:
 <f:selectItem itemValue="Estados Unidos" itemLabel="Estdos Unidos"/>
 </h:selectOneMenu>
  -->
+ <h:dataTable value="#{StudentsThree.countryOptions}" var="counter" border="1"
+ styleClass="" headerClass="" rowClasses="class1,class2">
+
+<h:column>>
+<f:facet name="header">HeaderText</f:facet>
+#{counter.firstName}
+</h:column>
+
+ </h:dataTable>
+ 
 <h:selectOneMenu value="#{studentTwo.coutry}">
 <f:selectItem itemValue="#{studentTwo.countryOptions}"/>StudentTwo.java
 </h:selectOneMenu>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
       <!-- Componentes -->
 <h:head>
   <title>Student registration form</title>
@@ -8,8 +10,14 @@
 
 <h:body>
 
-Student info: #{studentTwo.FirstName} #{studentTwo.lastName}
+Student info: #{studentFour.FirstName} #{studentFour.lastName}
 <br/>
+<ul>
+<ui:repeat value="#{studentFour.favLang}" var="tempLanguage">
+<li>#{tempLanguage}</li>
+</ui:repeat>
+</ul>
+
 Programming languages: #{studentTwo.favLanguage	}
 </h:body>
 

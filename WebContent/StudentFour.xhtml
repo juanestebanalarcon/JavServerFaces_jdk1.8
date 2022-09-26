@@ -5,13 +5,22 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
   <title>Student Four</title>
+  <style>
+  .error{
+  color:red;
+  }
+  </style>
 </h:head>
 
 <h:body>
 <h:form>
-First name: <h:inputText id="name" value="#{studentFour.firstName}" a:placeholder="what's your name"/>
+<h;messages styleClass="errir" for="fieldID"/>
+First name: <h:inputText id="name" value="#{studentFour.firstName}" a:placeholder="what's your name" required="true" label="texto sobre input" requiredMessage="error"/>
 <br/>
-Last name: <h:inputText id="lastName" value="#{studentFour.LastName}" a:placeholder="what's your last name"/>
+Last name: <h:inputText id="lastName" value="#{studentFour.LastName}" a:placeholder="what's your last name">
+<f:validateLongRange minimum="1" maximum="20"/>
+<f:validateRegrex pattern=""/>
+</h:inputText>
 <br/>
 <h:commandButton value="Enviar" action="student_four_response"/>
 <br/>

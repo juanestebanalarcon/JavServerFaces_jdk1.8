@@ -3,7 +3,11 @@ package com.jeam.jsf2.hello;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.component.UIComponent;
+import javax.faces.context.FacesContext;
+import javax.faces.validator.ValidatorException;
 
 @ManagedBean
 public class StudentFour {
@@ -14,7 +18,13 @@ public class StudentFour {
 
 	}
 	
-	
+	public void validatePersonalized(FacesContext context, UIComponent component, Object value) throws ValidatorException {
+		String data = value.toString();
+		if(data.startsWith("hola")) {
+			FacesMessage message = new FacesMessage("Course must start with hola");
+			throw new ValidatorException(message);
+		}
+	}
 	
 	public String[] getFavLang() {
 		return favLang;
