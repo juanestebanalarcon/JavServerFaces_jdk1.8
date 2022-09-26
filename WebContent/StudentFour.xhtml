@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+  <title>Student Four</title>
+</h:head>
+
+<h:body>
+<h:form>
+First name: <h:inputText id="name" value="#{studentFour.firstName}" a:placeholder="what's your name"/>
+<br/>
+Last name: <h:inputText id="lastName" value="#{studentFour.LastName}" a:placeholder="what's your last name"/>
+<br/>
+<h:commandButton value="Enviar" action="student_four_response"/>
+<br/>
+Favorite programming languages:
+
+<h:selectManyCheckBox value="#{StudentFour.favLang}">
+<f:selectItem itemValue="Java" itemLabel="JAVA"/>
+<f:selectItem itemValue="c#" itemLabel="C#"/>
+<f:selectItem itemValue="Python" itemLabel="PYTHON"/>
+</h:selectManyCheckBox>
+<br/>
+<h:commandButton value="Submit" action="student_four_response"/>
+</h:form>
+</h:body>
+
+</html>

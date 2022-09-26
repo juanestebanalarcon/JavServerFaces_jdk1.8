@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+  <title>Student Two</title>
+</h:head>
+
+<h:body>
+<h:form>
+First name: <h:inputText id="name" value="#{studentTwo.firstName}" a:placeholder="what's your name"/>
+<br/>
+Last name: <h:inputText id="lastName" value="#{studentTwo.LastName}" a:placeholder="what's your last name"/>
+<br/>
+<h:commandButton value="Enviar" action="response_student"/>
+<br/>
+Country:
+<!-- 
+<h:selectOneMenu value="#{studentTwo.coutry}">
+<f:selectItem itemValue="Brazil" itemLabel="Brazil"/>
+<f:selectItem itemValue="Colombia" itemLabel="Colombia"/>
+<f:selectItem itemValue="Chile" itemLabel="Chile"/>
+<f:selectItem itemValue="Estados Unidos" itemLabel="Estdos Unidos"/>
+</h:selectOneMenu>
+ -->
+<h:selectOneMenu value="#{studentTwo.coutry}">
+<f:selectItem itemValue="#{studentTwo.countryOptions}"/>StudentTwo.java
+</h:selectOneMenu>
+<br/>
+<h:commandButton value="Submit" action="student_two_response"/>
+</h:form>
+</h:body>
+
+</html>

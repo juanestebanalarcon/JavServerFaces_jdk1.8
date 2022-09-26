@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+  <title>Student</title>
+</h:head>
+
+<h:body>
+<h:form>
+First name: <h:inputText id="name" value="#{student.firstName}" a:placeholder="what's your name"/>
+<br/>
+Last name: <h:inputText id="lastName" value="#{student.LastName}" a:placeholder="what's your last name"/>
+<br/>
+<h:commandButton value="Enviar" action="response_student"/>
+</h:form>
+</h:body>
+
+</html>
